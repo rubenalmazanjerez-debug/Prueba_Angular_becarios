@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MachineDashboard } from '../machine-dashboard/machine-dashboard';
 
 @Component({
   imports: [],
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './telemetry-display.css',
   templateUrl: './telemetry-display.html',
 })
-export class TelemetryDisplay {}
+export class TelemetryDisplay extends MachineDashboard{
+  constructor() {
+    super();
+  }
+}
