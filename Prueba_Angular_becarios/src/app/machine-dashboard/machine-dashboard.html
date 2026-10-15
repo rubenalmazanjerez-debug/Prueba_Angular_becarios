@@ -1,17 +1,16 @@
 <div class="dashboard-layout">
+
   <header class="dashboard-header">
-    <h2>Panel de Control de la Máquina</h2>
+    <h1>Panel de Control de la Máquina</h1>
+    <hr>
   </header>
 
   <div class="dashboard-content">
-    <!-- Componente de visualización -->
     <app-telemetry-display [machineState]="machineState$ | async"></app-telemetry-display>
 
-    <!-- Requisito: Componente hijo de control -->
-    <!-- Escuchamos los eventos (startAction) y (stopAction) y ejecutamos los métodos del padre -->
     <app-control-panel
-      (startAction)="startMachine()"
-      (stopAction)="stopMachine()">
+      (start)="startMachine()"
+      (stop)="stopMachine()">
     </app-control-panel>
   </div>
 </div>

@@ -13,7 +13,9 @@ export class TelemetryDisplay {
   @Input() machineState: MachineState | null = null;
 
   get isErrorState(): boolean {
-    if (!this.machineState) return false;
+    if (!this.machineState) {
+      return false;
+    }
     return this.machineState.status === 'ERROR' || this.machineState.temperature > 80;
   }
 

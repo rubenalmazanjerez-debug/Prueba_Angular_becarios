@@ -1,13 +1,12 @@
-/* Requisito: Estilos CSS básicos, accesibles y simples */
 .control-panel {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 40px;
 }
 
 .btn {
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 60px 120px;
+  font-size: 36px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -16,7 +15,6 @@
   color: white;
 }
 
-/* Estilo para accesibilidad (focus) */
 .btn:focus {
   outline: 3px solid #333;
   outline-offset: 2px;

@@ -8,14 +8,14 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./control-panel.css'],
 })
 export class ControlPanel {
-  @Output() startAction = new EventEmitter<void>();
-  @Output() stopAction = new EventEmitter<void>();
+  @Output() start: EventEmitter<void> = new EventEmitter<void>();
+  @Output() stop: EventEmitter<void> = new EventEmitter<void>();
 
   onStart(): void {
-    this.startAction.emit();
+    this.start.emit();
   }
 
   onStop(): void {
-    this.stopAction.emit();
+    this.stop.emit();
   }
 }

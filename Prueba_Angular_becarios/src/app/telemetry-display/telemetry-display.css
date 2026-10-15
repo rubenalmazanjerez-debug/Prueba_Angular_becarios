@@ -1,17 +1,18 @@
-.machine-container {
+.machine-display {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  border: 4px solid #333; /* Borde por defecto */
-  border-radius: 15px;
+  padding: 70px;
+  border: 30px solid #333;
   background-color: #f0f0f0;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  width: 250px;
+  transition: border-color 1.3s ease;
+  border-radius: 25px;
+  width: 550px;
+  height: 400px;
 }
 
-/* Requisito reactivo: Si hay error o > 80°C, el borde se vuelve rojo */
-.machine-container.error-state {
+
+.machine-display.error-state {
   border-color: #ff0000;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
 }
@@ -23,13 +24,12 @@
   gap: 15px;
 }
 
-/* Estilo del LED */
 .led {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%; /* Círculo perfecto */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   border: 2px solid #555;
-  transition: background-color 0.3s ease;
+  transition: background-color 1.3s ease;
 }
 
 .led-green {
@@ -50,6 +50,8 @@
   text-align: center;
   font-family: monospace;
   color: #333;
+  font-size: 2.2rem;
+  margin: 10px 0;
 }
 
 .telemetry-data p {
