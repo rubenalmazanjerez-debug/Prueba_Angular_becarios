@@ -22,13 +22,12 @@ export class MachineService implements OnDestroy {
 
   private generateTelemetryData(): void {
     const currentState: MachineState = this.status.value;
-    const currentTemp: number = (Math.random() - 0.5) * 3; //   (+/- 1.5 grados)
+    const currentTemp: number = Math.round(Math.random() * 100); //   (0-100 grados)
     const currentRpm: number = (Math.random() - 0.5) * 200; //  (+/- 100 RPM)
 
-    const newTemperature: number = Math.round((currentState.temperature + currentTemp) * 100) / 100;
     const newRpm: number = Math.max(0, Math.round(currentState.rpm + currentRpm));
     const newState: MachineState = {
-      temperature: newTemperature,
+      temperature: currentTemp,
       rpm: newRpm,
       status: 'RUNNING',
     };
