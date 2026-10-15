@@ -1,8 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MachineDashboard } from './machine-dashboard/machine-dashboard';
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [MachineDashboard],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',

@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { NgClass, DecimalPipe } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { MachineState} from '../interface/MachineState';
 
 @Component({
   selector: 'app-telemetry-display',
   standalone: true,
-  imports: [NgClass, DecimalPipe],
+  imports: [DecimalPipe],
   templateUrl: './telemetry-display.html',
   styleUrls: ['./telemetry-display.css'],
 })
