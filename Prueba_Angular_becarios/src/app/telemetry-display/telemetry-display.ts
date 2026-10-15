@@ -1,15 +1,23 @@
-import { Component } from '@angular/core';
-import { MachineDashboard } from '../machine-dashboard/machine-dashboard';
+import { Component, Input } from '@angular/core';
+import { NgClass, DecimalPipe } from '@angular/common';
+import { MachineState} from '../interface/MachineState';
 
 @Component({
-  imports: [],
-  standalone: true,
   selector: 'app-telemetry-display',
-  styleUrl: './telemetry-display.css',
+  standalone: true,
+  imports: [NgClass, DecimalPipe],
   templateUrl: './telemetry-display.html',
+  styleUrls: ['./telemetry-display.css'],
 })
-export class TelemetryDisplay extends MachineDashboard{
-  constructor() {
-    super();
+export class TelemetryDisplay {
+  @Input() machineState: MachineState | null = null;
+
+  get isErrorState(): boolean {
+    if (!this.machineState) return false;
+    return this.machineState.status === 'ERROR' || this.machineState.temperature > 80;
+  }
+
+  get isRunningState(): boolean {
+    return this.machineState?.status === 'RUNNING';
   }
 }

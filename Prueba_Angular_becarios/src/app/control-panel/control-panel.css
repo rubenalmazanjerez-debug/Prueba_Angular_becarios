@@ -1,0 +1,39 @@
+/* Requisito: Estilos CSS básicos, accesibles y simples */
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s, transform 0.1s;
+  color: white;
+}
+
+/* Estilo para accesibilidad (focus) */
+.btn:focus {
+  outline: 3px solid #333;
+  outline-offset: 2px;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-start {
+  background-color: #2e7d32; /* Verde oscuro para mejor contraste */
+}
+
+.btn-stop {
+  background-color: #c62828; /* Rojo oscuro para mejor contraste */
+}

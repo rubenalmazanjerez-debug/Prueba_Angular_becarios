@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
-import { MachineDashboard } from '../machine-dashboard/machine-dashboard';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  imports: [],
-  standalone : true,
   selector: 'app-control-panel',
-  styleUrl: './control-panel.css',
+  standalone: true,
+  imports: [],
   templateUrl: './control-panel.html',
+  styleUrls: ['./control-panel.css'],
 })
-export class ControlPanel extends MachineDashboard{
-  constructor() {
-    super();
+export class ControlPanel {
+  @Output() startAction = new EventEmitter<void>();
+  @Output() stopAction = new EventEmitter<void>();
+
+  onStart(): void {
+    this.startAction.emit();
+  }
+
+  onStop(): void {
+    this.stopAction.emit();
   }
 }

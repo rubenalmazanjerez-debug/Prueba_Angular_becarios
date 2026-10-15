@@ -1,1 +1,19 @@
-<p>telemetry-display works!</p>
+<div class="machine-container" [class]="{'error-state': isErrorState, 'running-state': isRunningState}">
+
+  <div class="machine-body">
+
+    <div class="led" [class]="{
+      'led-green': isRunningState && !isErrorState,
+      'led-red': isErrorState,
+      'led-grey': !isRunningState && !isErrorState
+    }"></div>
+
+    <div class="telemetry-data">
+      <h3>Motor</h3>
+      <p>Temperatura: <strong>{{ machineState?.temperature | number:'1.2-2' }} °C</strong></p>
+      <p>RPM: <strong>{{ machineState?.rpm }}</strong></p>
+      <p>Estado: <strong>{{ machineState?.status }}</strong></p>
+    </div>
+
+  </div>
+</div>
