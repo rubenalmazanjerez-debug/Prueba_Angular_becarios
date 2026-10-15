@@ -1,4 +1,3 @@
-/* Requisito de maquetación: Distribuir el panel de control y el área de visualización */
 .dashboard-layout {
   display: flex;
   flex-direction: column;
