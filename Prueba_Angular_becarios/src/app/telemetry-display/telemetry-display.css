@@ -1,7 +1,7 @@
 .machine-display {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /*alinear horizontalmente*/
+  align-items: center;  /*alinear verticalmente*/
   padding: 70px;
   border: 30px solid #333;
   background-color: #f0f0f0;
@@ -11,10 +11,9 @@
   height: 400px;
 }
 
-
-.machine-display.error-state {
+.error-state {
   border-color: #ff0000;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5); /*50% trasparencia*/
 }
 
 .machine-body {

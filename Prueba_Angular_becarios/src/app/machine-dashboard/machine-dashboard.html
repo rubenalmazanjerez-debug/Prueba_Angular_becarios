@@ -6,7 +6,9 @@
   </header>
 
   <div class="dashboard-content">
-    <app-telemetry-display [machineState]="machineState$ | async"></app-telemetry-display>
+    <app-telemetry-display
+      [machineState]="machineState$ | async">
+    </app-telemetry-display>
 
     <app-control-panel
       (start)="startMachine()"
